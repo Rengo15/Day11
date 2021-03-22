@@ -1,15 +1,13 @@
 // Create an array here
-var myArr =[2,4,0,8,10];
+myArray = [2, 4, 0, 8, 10];
 // End of creating an array
+function myArrayFunction(arr) {
+  var myItems = [...arr];
+  // Only change code below this line
 
-function myArrayFunction(arr){
-    var MyItems =[arr]
-    // Only change code below this line
-
-    // Only change code above this line
-    var MyItems=myArr;
-    MyItems[2]=6;
-    return MyItems;
+  myItems[2] = 6;
+  return myItems;
+  // Only change code above this line
 }
-console.log(myArrayFunction());
-module.exports=myArrayFunction;
+console.log(myArrayFunction(myArray)); // Change this line
+module.exports = myArrayFunction;
