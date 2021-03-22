@@ -1,23 +1,25 @@
-var monitorsListArray=["Apple", "Peach", "Berry"];
+// Create a temps array here
 
-function myMonitorsFunction(arr){
-    var MonitorList=[arr];
-    var MonitorList=[];
-    var a=[1, 2, 3];
-    var monitor=[];
-    var number=[];
-    
-    
+monitorsListArray = ["Apple", "Peach", "Berry"];
 
-    for(var i=0; i<monitorsListArray.length; i++){
-        
-        MonitorList.push(monitorsListArray[i],a[i]);
-        
-        
+// End of temps array
 
-    }
+function myMonitorsFunction(arr) {
+  var newMonitorsList = [...arr];
+  var monitorsList = [];
+  var index = 1;
+  // Only change code below this line
 
-    return MonitorList;
+  // Only change code above this line
+  for (var i = 0; i < newMonitorsList.length; i++) {
+    itemToAdd = newMonitorsList[i];
+    monitorsList.push([itemToAdd, index]);
+    index++;
+  }
+  
+  return monitorsList;
 }
-console.log(myMonitorsFunction());
-module.exports=myMonitorsFunction;
+
+console.log(myMonitorsFunction(monitorsListArray)); // Change this line
+
+module.exports = myMonitorsFunction;
