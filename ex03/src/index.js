@@ -1,25 +1,29 @@
-// Create a myPetsArray here
-var myPetsArray=["Dog", "Cat"];
-// End of myPetsArray
+// Create a temps array here
 
-function myArrayFunction(myPets){
-    
-    var myNewPets = [myPets];
-    var myNewPets=[];
-    
-    myNewPets.push("Bird", "Fish");
+myPetsArray = ["Dog", "Cat"];
 
-    
-    myNewPets.pop();
-    myNewPets.unshift(myPetsArray[1])
-    var lastPet=myNewPets.slice(-1);
-    myNewPets.unshift("Lion");
-    var firstPet=myNewPets[0];
+// End of temps array
 
-   
-    return myNewPets;
+function myArrayFunction(myPets) {
+  var myNewPets = [...myPets];
 
+  // Only change code below this line
+
+  // Only change code above this line
+
+  myNewPets.push("Bird", "Fish");
+
+  firstPet = myNewPets.shift();
+  lastPet = myNewPets.pop();
+
+  myNewPets.unshift("Lion");
+
+  
+
+  
+  return myNewPets;
 }
 
-console.log(myArrayFunction());
-module.exports=myArrayFunction;
+console.log(myArrayFunction(myPetsArray)); // Change this line
+
+module.exports = myArrayFunction;
